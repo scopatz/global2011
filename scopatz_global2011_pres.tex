@@ -22,16 +22,16 @@
 \bibliography{library}{}
 
 
-%Presentation information
+entation information
 \title{Fuel Cycle Covariance of Plutonium and Americium Separations to Repository Capacity using Information Theoretic Measures}
 \subtitle{GLOBAL 2011 - December 15\superscript{th}, 2011 - Makuhari, Japan}
 \author{Anthony Scopatz\superscript{1}, Jun Li\superscript{2}, Erich Schneider\superscript{3}, Man-Sung Yim\superscript{4}}
 \email{scopatz@flash.uchicago.edu}
 \institution{\tiny
-\superscript{1}The University of Chicago\\
+\superscript{1}The University of Chicago; 
 \superscript{2}University of North Carolina at Chapel Hil\\
-\superscript{3}The University of Texas at Austin\\
-\superscript{4}KAIST\\
+\superscript{3}The University of Texas at Austin; 
+\superscript{4}KAIST
 }
 
 \slideCaption{Scopatz - GLOBAL 2011}
@@ -75,111 +75,38 @@
 
 
 
-
 % Motivation
-\begin{slide}{Motivation}
-\begin{center}
-\begin{figure}
-\caption{Physics Modeled versus Execution Time}
-\includegraphics[scale=0.35]{figs/physics_vs_exec_time.eps}
-\end{figure}
-\end{center}
-\end{slide}
-
-
-
-
-% Motivation
-\begin{slide}{Motivation}
-\small \underline{Basic Fuel Cycle Schema:}
-\begin{center}
-\includegraphics[scale=0.5]{figs/basic_nfc_schema.eps}
-\end{center}
-
-\underline{Modeling Approaches:} \small
-\begin{center}
-\begin{tabular}{lccc}
-\textit{Component}                  & \textit{Recipes}  & \textit{Essential} & \textit{Transport}   \\
-\underline{\textbf{Front End:}}     & Recipes           & Physics Models     & Physics Models       \\
-\underline{\textbf{Reactor:}}       & Recipes           & Rapid Burnup Code  & Neutron Transport    \\
-\underline{\textbf{Repository:}}    & Curve Fits        & Rapid Code         & Neutron Transport    \\
-\end{tabular}
-\end{center}
-\end{slide}
-
-
-
-
-
-% Motivation
-\overlays{2}{
-\begin{slide}{Motivation}
-\FromSlide{1}
-\begin{itemize}
-    \item Investigating the region of interest may provide a 
-        \textit{transformative} amount of fuel cycle data.  
-
-\FromSlide{2}
-    \item However, this requires an entirely new spectrum of tools.
-
-\FromSlide{1}
-\end{itemize}
-
-
-\FromSlide{2}
-\setcounter{figure}{1}
-\begin{center}
-\begin{figure}
-\caption{Fuel Cycle Stack}
-\includegraphics[scale=0.35]{figs/fc_stack.eps}
-\end{figure}
-\end{center}
-
-\end{slide}}
-
-
-
-% Definition
-\begin{slide}{Definition}
-\vspace{3.0cm}
-\begin{center}
-\textit{Essential physics} models remain physically valid under perturbations
-in the locality of the region that they are defined and do not compute
-extraneous parameters.  
-\end{center}
-\end{slide}
-
-
-
-
-% A Path Forward
 \overlays{4}{
-\begin{slide}{A Path Forward}
+\begin{slide}{Motivation}
 \FromSlide{1}
 \begin{itemize}
-    \item Develop a set of fuel cycle component models which 
-        preserve basic physics (largely focused on a one-energy 
-        group reactor model, R1G).
+    \item Many fuel cycle sensitivity studies focus on linear, 
+        1D parameter sweeps from base case scenarios.
 
 \FromSlide{2}
-    \item Investigate a categorical set of fuels cycles using
-        the above components. (These are largely linear 
-        perturbations of previous base-case studies.)
+    \item However, a set of fuel cycle component models which 
+        preserve basic physics has been developed. 
 
 \FromSlide{3}
-    \item Extend the fuel cycle model to perturb continuous 
-        variables.  This requires a stochastic driving mechanism
-        to run.  Moreover, it requires entropy-based measures to
-        analyze.
+    \item This syuite largely focused on a one-energy 
+        group reactor model (R1G) and a deep geologic
+        repository model.
 
 \FromSlide{4}
-    \item Model the reactor component with 
-        multiple energy groups (RMG).  This enables the study 
-        of reactors and fuel cycles forbidden in the R1G regime.
+    \item These essential physics models were used to extend the 
+        fuel cycle sensitivity studies to simelateously perturb 
+        many continuous variables.  
+
+\FromSlide{5}
+    \item Such studies require a stochastic driving mechanism
+        to run.  Moreover, they require entropy-based measures to
+        analyze.
 
 \FromSlide{1}
 \end{itemize}
 \end{slide}}
+
+
 
 
 
