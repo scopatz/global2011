@@ -314,11 +314,11 @@ HLW: FP                & 0.985876    & 0.985973             & +0.0098 & 0.985831
     \item Denote fuel cycle responses as $R$ [GWh] for $x$ \& $y$ input parameters.
 
 \FromSlide{4}
-    \item \textbf{\underline{Goal:}} Determine strength of \textit{association} 
-        between inputs and pairs of inputs to the response in a manner that is independent to:
+    \item \textbf{\underline{Goal:}} Determine \textit{covariance} 
+        pairs of inputs to the response in a manner that is independent of:
         \begin{itemize}
-            \item the form of the response to the input $R(x)$,
-            \item any base-case set of initial inputs.
+            \item the form of the response to the input $R(x,y)$
+            \item and any base-case set of initial inputs.
         \end{itemize}
 
 \FromSlide{1}
@@ -522,14 +522,14 @@ But doesn't this approach ignore the underlying biology?
 
 
 % FR Pu SE and FR Am SE
-\begin{slide}{Contingency Table for FR Pu SE and FR Am SE}
+\begin{slide}{3D Table for FR Pu SE \& FR Am SE}
 \begin{center}
 \tiny
 \begin{tabular}{|c||c|c|c||c|}
 \hline
 \multicolumn{5}{|c|}{Slice for 0.9 $<$ \texttt{FR\_SE\_AM} $<$ 0.99}\\
 \hline
-&$0.9 <$ \texttt{FR\_SE\_PU} $< 0.99$&$0.99 <$ \texttt{FR\_SE\_PU} $< 0.999$&$0.999 <$ \texttt{FR\_SE\_PU} $< 0.9999$&\\
+\texttt{FR\_SE\_PU} & $[0.9, 0.99]$ & $[0.99, 0.999]$& $[0.999, 0.9999]$&\\
 \hline
 $10^4 <$ \texttt{Capacity} $< 10^5$&$426$&$41$&$27$&$494$\\
 \hline
@@ -544,7 +544,7 @@ $10^7 <$ \texttt{Capacity} $< 10^8$&$0$&$0$&$2$&$2$\\
 \hline
 \multicolumn{5}{|c|}{Slice for 0.99 $<$ \texttt{FR\_SE\_AM} $<$ 0.999}\\
 \hline
-&$0.9 <$ \texttt{FR\_SE\_PU} $< 0.99$&$0.99 <$ \texttt{FR\_SE\_PU} $< 0.999$&$0.999 <$ \texttt{FR\_SE\_PU} $< 0.9999$&\\
+\texttt{FR\_SE\_PU} & $[0.9, 0.99]$ & $[0.99, 0.999]$& $[0.999, 0.9999]$&\\
 \hline
 $10^4 <$ \texttt{Capacity} $< 10^5$&$162$&$0$&$0$&$162$\\
 \hline
@@ -564,14 +564,14 @@ $10^7 <$ \texttt{Capacity} $< 10^8$&$0$&$34$&$219$&$253$\\
 
 
 % FR Pu SE and FR Am SE
-\begin{slide}{Contingency Table for FR Pu SE and FR Am SE}
+\begin{slide}{3D Table for FR Pu SE \& FR Am SE}
 \begin{center}
 \tiny
 \begin{tabular}{|c||c|c|c||c|}
 \hline
 \multicolumn{5}{|c|}{Slice for 0.999 $<$ \texttt{FR\_SE\_AM} $<$ 0.9999}\\
 \hline
-&$0.9 <$ \texttt{FR\_SE\_PU} $< 0.99$&$0.99 <$ \texttt{FR\_SE\_PU} $< 0.999$&$0.999 <$ \texttt{FR\_SE\_PU} $< 0.9999$&\\
+\texttt{FR\_SE\_PU} & $[0.9, 0.99]$ & $[0.99, 0.999]$& $[0.999, 0.9999]$&\\
 \hline
 $10^4 <$ \texttt{Capacity} $< 10^5$&$151$&$2$&$0$&$153$\\
 \hline
@@ -586,7 +586,7 @@ $10^7 <$ \texttt{Capacity} $< 10^8$&$0$&$179$&$832$&$1011$\\
 \hline
 \multicolumn{5}{|c|}{Aggregation over \texttt{FR\_SE\_AM}}\\
 \hline
-&$0.9 <$ \texttt{FR\_SE\_PU} $< 0.99$&$0.99 <$ \texttt{FR\_SE\_PU} $< 0.999$&$0.999 <$ \texttt{FR\_SE\_PU} $< 0.9999$&\\
+\texttt{FR\_SE\_PU} & $[0.9, 0.99]$ & $[0.99, 0.999]$& $[0.999, 0.9999]$&\\
 \hline
 $10^4 <$ \texttt{Capacity} $< 10^5$&$739$&$43$&$27$&$809$\\
 \hline
@@ -607,40 +607,18 @@ $10^7 <$ \texttt{Capacity} $< 10^8$&$0$&$213$&$1053$&$1266$\\
 
 
 % Contingency Table Statistics
-\overlays{3}{
-\begin{slide}{Contingency Table Statistics}
-\FromSlide{1}
-There are several metrics that have been developed to measure 
-associations with contingency tables.  
-
-\FromSlide{2}
-\vspace{0.5cm}
-The primary measure here in 2D is the \emph{Uncertainty Coefficient} $U(x|R)$.
-
-\FromSlide{3}
-\vspace{0.5cm}
-To calculate $U(x|R)$ the following are needed, 
-\begin{itemize}
-    \item The \emph{Entropy} $H(x)$, which is a measure of how evenly the 
-        data is spread out in the $x$ parameter.
-    \item The \emph{Mutual Information} $I(R,x)$ which states the shared
-        value of the $x$ together with $R$. 
-\end{itemize}
-\end{slide}}
-
-
-% Contingency Table Statistics
 \overlays{2}{
 \begin{slide}{Contingency Table Statistics}
 \FromSlide{1}
-The uncertainty coefficient is then calculated from,
+The primary measure of the \textit{strength of association} in 2D 
+is the \emph{Uncertainty Coefficient} $U(x|R)$.
 \[ U(x|R) = \frac{I(R,x)}{H(x)} \]
 
 \FromSlide{2}
 This metric has the following useful properties:
 \begin{enumerate}
     \item Defined on the range $[0, 1]$.
-    \item $U(x|R) = 0$ implies that $I(R,x) = 0$, which indicates that the parameter
+    \item $U(x|R) = 0$ implies that $I(R,x) = 0$, the parameter
         is unassociated with the response.
     \item $U(x|R) = 1$ requires that $I(R,x) = H(x)$.  This implies that
         the system response $R(x)$ is solely determined by $x$.
