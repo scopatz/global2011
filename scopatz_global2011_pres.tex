@@ -311,7 +311,7 @@ HLW: FP                & 0.985876    & 0.985973             & +0.0098 & 0.985831
         to the \underline{repository} \underline{capacity} response.  
 
 \FromSlide{3}
-    \item Denote fuel cycle responses as $R$ [GWh] for $x$ \& $y$ input parameters.
+    \item Denote fuel cycle responses as $R$ [MTHM/Rep.] for $x$ \& $y$ input parameters.
 
 \FromSlide{4}
     \item \textbf{\underline{Goal:}} Determine \textit{covariance} 
@@ -324,6 +324,8 @@ HLW: FP                & 0.985876    & 0.985973             & +0.0098 & 0.985831
 \FromSlide{1}
 \end{itemize}
 \end{slide}}
+
+
 
 
 
@@ -445,13 +447,12 @@ Distance Between Drifts & 56 & 106 & m & linear \\
     \end{itemize}
 
 \FromSlide{3}
-    \item Thus a quantitative ranking of the \emph{associations} of each input parameter 
-        to the response is desired.  
+    \item Previous studies explored the quantitative ranking of \emph{associations} 
+        of each input parameters to the response [4].
 
 \FromSlide{4}
-    \begin{itemize}
-        \item (Note that these associations do not imply a linear response!)
-    \end{itemize}
+    \item Here, the pairs of input parameters are ranked based on their
+    \emph{covariance} to the response.  
 
 \FromSlide{5}
     \item These rankings are obtained by borrowing an analysis tool that is often 
@@ -628,37 +629,6 @@ This metric has the following useful properties:
 
 
 
-% Contingency Table 3D Extension
-\overlays{5}{
-\begin{slide}{Contingency Table 3D Extension}
-\FromSlide{1}
-\begin{itemize}
-    \item \textbf{\underline{New Goal:}} Now that the association of $x$ to $R$ may be determined, 
-        finding the sensitivity of $R(x)$ to other inputs.
-
-\FromSlide{2}
-    \item Call $y$ an input parameter distinct from $x$.  Measuring the simultaneous
-        effect of two inputs to a response may be performed using 3D tables!
-
-\FromSlide{3}
-    \item Note that \textit{`slices'} of these 3D tables may be seen as 2D tables bins 
-        along a specific cut of data.
-
-\FromSlide{4}
-    \item For 30 inputs, there are $_{30}C_2 = 435$ contingency tables to construct.
-
-\FromSlide{5}
-    \item Different metrics will be needed to account for the added dimensionality.
-
-\FromSlide{1}
-\end{itemize}
-\end{slide}}
-
-
-
-
-
-
 
 % 3D Contingency Table Statistics
 \overlays{4}{
@@ -760,8 +730,8 @@ Thus, $c_v(x|y|R)$ has the following properties:
 \hline
 14&\texttt{Ambient\_Temp}&\texttt{LWR\_Fuel2Mod}&0.007066\\
 \hline
-15&\texttt{Ambient\_Temp}&\texttt{Heat\_Loss\_Factor}&0.007044\\
-\hline
+%15&\texttt{Ambient\_Temp}&\texttt{Heat\_Loss\_Factor}&0.007044\\
+%\hline
 \end{tabular}
 \end{center}
 \end{slide}
@@ -869,6 +839,7 @@ Thus, $c_v(x|y|R)$ has the following properties:
     \item \fullcite{Scopatz2009}
     \item \fullcite{Li2010a}
     \item \fullcite{NEA-5990}
+    \item \fullcite{Scopatz2010a}
     \item \fullcite{Takano1994}
     \item \fullcite{Press2007c}
     \item \fullcite{ENDF}
