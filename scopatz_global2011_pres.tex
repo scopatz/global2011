@@ -110,81 +110,6 @@
 
 
 
-
-
-
-
-
-
-% Sensitivity Methodology Overview
-\overlays{4}{
-\begin{slide}{Sensitivity Methodology Overview}
-\FromSlide{1}
-\begin{itemize}
-    \item Here, the system-wide impact of physical parameter perturbations is quantified.
-
-\vspace{0.5cm}
-\FromSlide{2}
-    \item This is done by looking for linear, 1D sensitivity coefficients for each parameter
-        to the \underline{repository capacity} response, measured in [PWh].   
-
-\vspace{0.5cm}
-\FromSlide{3}
-    \item Denote these sensitivity coefficients as $S_x$ for a small change in an input parameter $x$.
-
-\vspace{0.5cm}
-\FromSlide{4}
-    \item Sensitivity coefficients are presented for 10\% 
-        changes in $x$ from assumed base-case values.
-
-\FromSlide{1}
-\end{itemize}
-\end{slide}}
-
-
-
-
-
-
-
-% Sensitivity Methodology Overview
-\overlays{5}{
-\begin{slide}{Sensitivity Methodology Overview}
-\FromSlide{1}
-\begin{itemize}
-\FromSlide{1}
-    \item The basic algorithm is as follows:
-
-\tiny
-\FromSlide{2}
-        \begin{enumerate}
-            \item For each input parameter $x$, change its base-case value $x_0$ by $\pm10\%$.
-                \[ x \to (1 \pm 0.1)x_0 \]
-
-            \FromSlide{3}
-            \item If $x$ is a separation efficiency (SE), instead perturb by $\pm$ ``one nine''
-                worth of separations.
-                \[ x = 0.999 \to x \in \{0.99, 0.9999\} \]
-
-            \FromSlide{4}
-            \item Meanwhile, maintain all other parameters ($y, z, \ldots$) at their
-                base-case values.
-                \[ y, z, \ldots \to y_0, z_0, \ldots \]    
-
-            \FromSlide{5}
-            \item Calculate the new repository capacity response, $R$, by the perturbed cycle and record 
-                the sensitivity as the percent change from the base-case response, $R_0$.
-                \[ S_{\pm x} = \left(\frac{R}{R_0} - 1\right) \times 100 \]
-
-        \FromSlide{2}
-        \end{enumerate}
-
-\FromSlide{1}
-\end{itemize}
-\end{slide}}
-
-
-
 % Fuel Cycle
 \overlays{2}{
 \begin{slide}{Fuel Cycle}
@@ -197,10 +122,10 @@
 \end{itemize}
 
 \FromSlide{2}
-\setcounter{figure}{9}
+\setcounter{figure}{0}
 \begin{center}
 \begin{figure}
-\includegraphics[scale=0.2]{../one_group_method/figs/Fig09.eps}
+\includegraphics[scale=0.2]{figs/LWR_FR_FC.eps}
 \caption{LWR-FR Fuel Cycle}
 \end{figure}
 \end{center}
@@ -217,7 +142,7 @@
 With perturbable components, over 30 independent physical 
 parameters may be adjusted in the fuel cycle.
 \FromSlide{2}
-\setcounter{figure}{10}
+\setcounter{figure}{1}
 \begin{figure}
 \begin{center}
 \includegraphics[scale=0.2]{figs/LWR_FR_FC_knobs.eps}
@@ -1315,8 +1240,8 @@ Thus, $c_v(x|y|R)$ has the following properties:
 \begin{enumerate}
     \item \fullcite{Scopatz2009}
     \item \fullcite{Li2010a}
-    \item \fullcite{Takano1994}
     \item \fullcite{NEA-5990}
+    \item \fullcite{Takano1994}
     \item \fullcite{Press2007c}
     \item \fullcite{ENDF}
     \item \fullcite{Croff2002}
