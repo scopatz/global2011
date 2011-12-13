@@ -294,204 +294,17 @@ HLW: FP                & 0.985876    & 0.985973             & +0.0098 & 0.985831
 
 
 
-% Fuel Cycle Dynamics
-\begin{slide}{Fuel Cycle Dynamics}
-\begin{center}
-\begin{figure}
-\caption{Input Streams to FR [kg/kgIHM]}
-\includegraphics[scale=0.4]{../se_sensitivity/figs/MassStreams.eps}
-\end{figure}
-\end{center}
-\end{slide}
 
 
 
 
 
-% Fuel Cycle Dynamics
-\begin{slide}{Fuel Cycle Dynamics}
-\vspace{0.75cm}
-\begin{center}
-\begin{figure}
-\caption{FR Output [kg/kgd] \& TRU CR}
-\includegraphics[scale=0.275]{../se_sensitivity/figs/FRfracOut.eps} 
-\includegraphics[scale=0.275]{../se_sensitivity/figs/TruCR.eps}
-\end{figure}
-\end{center}
-\end{slide}
-
-
-
-
-% Fuel Cycle Dynamics
-\begin{slide}{Fuel Cycle Dynamics}
-\vspace{0.75cm}
-\begin{center}
-\begin{figure}
-\caption{\nuc{Np}{237}, \nuc{Pu}{239} Input and Output [kg/kgIHM]}
-\includegraphics[scale=0.275]{../se_sensitivity/figs/NP237InOutSepEff.eps} 
-\includegraphics[scale=0.275]{../se_sensitivity/figs/PU239InOutSepEff.eps}
-\end{figure}
-\end{center}
-\end{slide}
-
-
-
-
-% Fuel Cycle Dynamics
-\begin{slide}{Fuel Cycle Dynamics}
-\vspace{0.75cm}
-\begin{center}
-\begin{figure}
-\caption{\nuc{Am}{241}, \nuc{Cm}{244} Input and Output [kg/kgIHM]}
-\includegraphics[scale=0.275]{../se_sensitivity/figs/AM241InOutSepEff.eps} 
-\includegraphics[scale=0.275]{../se_sensitivity/figs/CM244InOutSepEff.eps}
-\end{figure}
-\end{center}
-\end{slide}
-
-
-
-
-% Sensitivity Results
-\begin{slide}{Sensitivity Results}
-\begin{center}
-\begin{table}
-\scriptsize
-\caption{Top Parameters from Screening Study}
-\begin{tabular}{|l|c|c|c|}
-\hline
-\textbf{Parameter $x$}        & \textbf{Base Case $x_0$}    & \textbf{$S_{-x}$} [\%] & \textbf{$S_{+x}$} [\%]\\
-\hline
-\Red{\texttt{FR\_SE\_PU}}     & \Red{0.999}                 & \Red{-83.09}      & \Red{+99.30} \\
-\hline
-\Red{\texttt{LWR\_SE\_PU}}    & \Red{0.999}                 & \Red{-60.90}      & \Red{+18.28} \\
-\hline
-\Red{\texttt{FR\_SE\_AM}}     & \Red{0.999}                 & \Red{-59.53}      & \Red{+17.55} \\
-\hline
-\Red{\texttt{FR\_SE\_CM}}     & \Red{0.999}                 & \Red{-11.15}      & \Red{+1.28}  \\
-\hline
-\texttt{FR\_TRU\_CR}          & 0.500                       & +5.22             & -6.02  \\
-\hline
-\texttt{Rock\_Density}        & 2580 [kg/m\superscript{3}]  & -5.05             & +5.59  \\
-\hline
-\texttt{Rock\_Specific\_Heat} & 840 [J/kg/K]                & -4.90             & +5.59  \\
-\hline
-\texttt{LWR\_BUd}             & 50 [MWd/kg]                 & +5.46             & -3.48  \\
-\hline
-\texttt{FR\_BUd}              & 140 [MWd/kg]                & -5.44             & +5.32  \\
-\hline
-\end{tabular}
-\end{table}
-\end{center}
-\end{slide}
-
-
-
-
-
-
-% Sensitivity Results
-\begin{slide}{Sensitivity Results}
-\begin{center}
-\begin{table}
-\scriptsize
-\caption{Bottom Parameters from Screening Study}
-\begin{tabular}{|l|c|c|c|}
-\hline
-\textbf{Parameter $x$}           & \textbf{Base Case $x_0$}    & \textbf{$S_{-x}$} [\%] & \textbf{$S_{+x}$} [\%]\\
-\hline
-\Red{\texttt{LWR\_SE\_U}}        & \Red{0.999}                 & \Red{-0.01}      & \Red{+0.00} \\
-\hline
-\Red{\texttt{FR\_SE\_NP}}        & \Red{0.999}                 & \Red{-0.10}      & \Red{+0.01} \\
-\hline
-\Red{\texttt{FR\_SE\_U}}         & \Red{0.999}                 & \Red{-0.22}      & \Red{+0.01} \\
-\hline
-\texttt{FR\_LAN\_FF\_Cap}        & 0.0005 [w/o]                & +0.03            & -0.03 \\
-\hline
-\Red{\texttt{LWR\_SE\_NP}}       & \Red{0.999}                 & \Red{-0.26}      & \Red{+0.03} \\
-\hline
-\texttt{LWR\_SNF\_Storage\_Time} & 6 [y]                       & +0.06            & -0.14 \\
-\hline
-\Red{\texttt{LWR\_SE\_CM}}       & \Red{0.999}                 & \Red{-0.82}      & \Red{+0.08} \\
-\hline
-\texttt{Vent\_System\_On\_Time}  & 50 [y]                      & -0.11            & +1.13 \\
-\hline
-\texttt{Drift\_Diameter}         & 5.5 [m]                     & +0.26            & +0.58 \\
-\hline
-\end{tabular}
-\end{table}
-\end{center}
-\end{slide}
-
-
-
-
-
-
-%Counterintuitive Results
-\overlays{5}{
-\begin{slide}{Counterintuitive Results}
-\FromSlide{1}
-\begin{itemize}
-    \item For drift diameter, both $S_{-x}$ and $S_{+x}$ are positive!
-
-\vspace{0.2cm}
-\FromSlide{2}
-        \begin{itemize}
-            \item This arises from the assumption that the drift diameter very small as compared to the spacing 
-                between drifts.
-        \end{itemize}
-
-\vspace{0.2cm}
-\FromSlide{3}
-    \item Since the base-case sits near a local drift diameter minimum, linear sensitivities will never 
-        capture the full effect on the response.
-    
-\vspace{0.2cm}
-\FromSlide{4}
-    \item Additionally egregious is that, with increasing LWR burnup, the repository capacity goes down!
-
-\vspace{0.2cm}
-\FromSlide{5}
-        \begin{itemize}
-    \item This due to the overall TRU production \emph{per unit energy produced from the LWRs} declining.
-        \end{itemize}
-
-\FromSlide{1}
-\end{itemize}
-\end{slide}}
-
-
-
-
-
-
-% LWR Burnup Sensitivity}
-\begin{slide}{LWR Burnup Sensitivity}
-\begin{center}
-\begin{figure}
-\includegraphics[scale=0.4]{figs/LWR_BUd_sensitivity_RepCap.eps}
-\caption{Nuclide Generation Rate in the Final Waste}
-\end{figure}
-\end{center}
-\end{slide}
-
-
-
-
-
-
-
-
-
-
-% Fuel Cycle Methodology
+% Contingency Table Methodology
 \overlays{4}{
 \begin{slide}{Contingency Table Methodology}
 \FromSlide{1}
 \begin{itemize}
-    \item Here again, the system-wide impact of physical parameter perturbations is quantified.
+    \item Here, the system-wide impact of physical parameter perturbations is quantified.
 
 \FromSlide{2}
     \item This is done by performing \textbf{Contingency Table} analysis for each parameter
@@ -515,12 +328,12 @@ HLW: FP                & 0.985876    & 0.985973             & +0.0098 & 0.985831
 
 
 
-% Fuel Cycle Methodology
+% Contingency Table Methodology
 \begin{slide}{Contingency Table Methodology}
 \begin{center}
 \begin{figure}
 \caption{Monte Carlo Methodology \& Analysis}
-\includegraphics[scale=0.25]{../ct_sensitivity/figs/MonteCarloMethodology.eps}
+\includegraphics[scale=0.25]{figs/MonteCarloMethodology.eps}
 \end{figure}
 \end{center}
 \end{slide}
@@ -704,18 +517,93 @@ But doesn't this approach ignore the underlying biology?
 
 
 
-% Fuel Cycle Contingency Table
-\overlays{2}{
-\begin{slide}{Fuel Cycle Contingency Table}
-\FromSlide{1}
-For example, let's construct a 2D contingency table that 
-measures the response from a sample input: fast reactor 
-fuel plutonium separation efficiency, \texttt{FR\_SE\_PU}.
 
-\FromSlide{2}
-\vspace{0.50cm}
-\input{figs/ct2d_example.tex}
-\end{slide}}
+
+
+
+% FR Pu SE and FR Am SE
+\begin{slide}{Contingency Table for FR Pu SE and FR Am SE}
+\begin{center}
+\tiny
+\begin{tabular}{|c||c|c|c||c|}
+\hline
+\multicolumn{5}{|c|}{Slice for 0.9 $<$ \texttt{FR\_SE\_AM} $<$ 0.99}\\
+\hline
+&$0.9 <$ \texttt{FR\_SE\_PU} $< 0.99$&$0.99 <$ \texttt{FR\_SE\_PU} $< 0.999$&$0.999 <$ \texttt{FR\_SE\_PU} $< 0.9999$&\\
+\hline
+$10^4 <$ \texttt{Capacity} $< 10^5$&$426$&$41$&$27$&$494$\\
+\hline
+$10^5 <$ \texttt{Capacity} $< 10^6$&$10818$&$9937$&$9458$&$30213$\\
+\hline
+$10^6 <$ \texttt{Capacity} $< 10^7$&$270$&$1694$&$2191$&$4155$\\
+\hline
+$10^7 <$ \texttt{Capacity} $< 10^8$&$0$&$0$&$2$&$2$\\
+\hline
+&$11514$&$11672$&$11678$&$34864$\\
+\hline
+\hline
+\multicolumn{5}{|c|}{Slice for 0.99 $<$ \texttt{FR\_SE\_AM} $<$ 0.999}\\
+\hline
+&$0.9 <$ \texttt{FR\_SE\_PU} $< 0.99$&$0.99 <$ \texttt{FR\_SE\_PU} $< 0.999$&$0.999 <$ \texttt{FR\_SE\_PU} $< 0.9999$&\\
+\hline
+$10^4 <$ \texttt{Capacity} $< 10^5$&$162$&$0$&$0$&$162$\\
+\hline
+$10^5 <$ \texttt{Capacity} $< 10^6$&$10425$&$6114$&$5356$&$21895$\\
+\hline
+$10^6 <$ \texttt{Capacity} $< 10^7$&$1105$&$5455$&$6201$&$12761$\\
+\hline
+$10^7 <$ \texttt{Capacity} $< 10^8$&$0$&$34$&$219$&$253$\\
+\hline
+&$11692$&$11603$&$11776$&$35071$\\
+\hline
+\end{tabular}
+\end{center}
+\end{slide}
+
+
+
+
+% FR Pu SE and FR Am SE
+\begin{slide}{Contingency Table for FR Pu SE and FR Am SE}
+\begin{center}
+\tiny
+\begin{tabular}{|c||c|c|c||c|}
+\hline
+\multicolumn{5}{|c|}{Slice for 0.999 $<$ \texttt{FR\_SE\_AM} $<$ 0.9999}\\
+\hline
+&$0.9 <$ \texttt{FR\_SE\_PU} $< 0.99$&$0.99 <$ \texttt{FR\_SE\_PU} $< 0.999$&$0.999 <$ \texttt{FR\_SE\_PU} $< 0.9999$&\\
+\hline
+$10^4 <$ \texttt{Capacity} $< 10^5$&$151$&$2$&$0$&$153$\\
+\hline
+$10^5 <$ \texttt{Capacity} $< 10^6$&$10267$&$5560$&$4655$&$20482$\\
+\hline
+$10^6 <$ \texttt{Capacity} $< 10^7$&$1273$&$5946$&$6038$&$13257$\\
+\hline
+$10^7 <$ \texttt{Capacity} $< 10^8$&$0$&$179$&$832$&$1011$\\
+\hline
+&$11691$&$11687$&$11525$&$34903$\\
+\hline
+\hline
+\multicolumn{5}{|c|}{Aggregation over \texttt{FR\_SE\_AM}}\\
+\hline
+&$0.9 <$ \texttt{FR\_SE\_PU} $< 0.99$&$0.99 <$ \texttt{FR\_SE\_PU} $< 0.999$&$0.999 <$ \texttt{FR\_SE\_PU} $< 0.9999$&\\
+\hline
+$10^4 <$ \texttt{Capacity} $< 10^5$&$739$&$43$&$27$&$809$\\
+\hline
+$10^5 <$ \texttt{Capacity} $< 10^6$&$31510$&$21611$&$19469$&$72590$\\
+\hline
+$10^6 <$ \texttt{Capacity} $< 10^7$&$2648$&$13095$&$14430$&$30173$\\
+\hline
+$10^7 <$ \texttt{Capacity} $< 10^8$&$0$&$213$&$1053$&$1266$\\
+\hline
+&$34897$&$34962$&$34979$&$104838$\\
+\hline
+\end{tabular}
+\end{center}
+\end{slide}
+
+
+
 
 
 % Contingency Table Statistics
@@ -727,7 +615,7 @@ associations with contingency tables.
 
 \FromSlide{2}
 \vspace{0.5cm}
-The primary measure here is the \emph{Uncertainty Coefficient} $U(x|R)$.
+The primary measure here in 2D is the \emph{Uncertainty Coefficient} $U(x|R)$.
 
 \FromSlide{3}
 \vspace{0.5cm}
@@ -738,71 +626,6 @@ To calculate $U(x|R)$ the following are needed,
     \item The \emph{Mutual Information} $I(R,x)$ which states the shared
         value of the $x$ together with $R$. 
 \end{itemize}
-\end{slide}}
-
-
-% Contingency Table Statistics
-\overlays{3}{
-\begin{slide}{Contingency Table Statistics}
-\FromSlide{1}
-Denote the entries in a contingency table as $N_{ij}$ for the $i$\superscript{th} response bin
-and the $j$\superscript{th} input bin.
-
-\FromSlide{2}
-\vspace{0.5cm}
-The probability of landing in a given bin is therefore, 
-\[ p_{ij} = \frac{N_{ij}}{N} \] 
-
-\FromSlide{3}
-\vspace{0.5cm}
-Thus the entropy is calculated from, 
-\[ H(x) = - \sum_j^J p_{\cdot j} \ln(p_{\cdot j}) \]
-\end{slide}}
-
-
-% Contingency Table Statistics
-\overlays{2}{
-\begin{slide}{Contingency Table Statistics}
-\FromSlide{1}
-The mutual information is found via, 
-\[ I(R,x) = - \sum_{i,j}^{I,J} p_{ij} \ln\left(\frac{p_{ij}}{p_{i\cdot}\cdot p_{\cdot j}}\right) \]
-
-\FromSlide{2}
-\vspace{0.5cm}
-The relations may be seen graphically [4]:
-
-\vspace{0.5cm}
-\setlength{\unitlength}{1cm}
-\begin{center}
-\begin{picture}(9,3)(-4.5,-1.5)
-\thicklines
-\put(0,1.5){\vector(1,0){4.5}}
-\put(0,1.5){\vector(-1,0){4.5}}
-\put(-0.7,1.2){\tiny $H(x,R)$}
-
-\put(-2.25,1.0){\vector(1,0){2.25}}
-\put(-2.25,1.0){\vector(-1,0){2.25}}
-\put(-2.6,0.7){\tiny $H(x)$}
-
-\put(1.5,0.5){\vector(1,0){3}}
-\put(1.5,0.5){\vector(-1,0){3}}
-\put(1.2,0.2){\tiny $H(R)$}
-
-\put(-0.75,0){\vector(1,0){0.75}}
-\put(-0.75,0){\vector(-1,0){0.75}}
-\put(-1.2,-0.3){\tiny $I(R,x)$}
-
-\put(-3,-0.5){\vector(1,0){1.5}}
-\put(-3,-0.5){\vector(-1,0){1.5}}
-\put(-3.5,-0.8){\tiny $H(x|R)$}
-
-\put(2.25,-0.5){\vector(1,0){2.25}}
-\put(2.25,-0.5){\vector(-1,0){2.25}}
-\put(2.0,-0.8){\tiny $H(R|x)$}
-
-\end{picture}
-\end{center}
-
 \end{slide}}
 
 
@@ -823,96 +646,6 @@ This metric has the following useful properties:
         the system response $R(x)$ is solely determined by $x$.
 \end{enumerate}
 \end{slide}}
-
-
-
-% Input Parameters Ranked by $U(x|R)$
-\begin{slide}{Input Parameters Ranked by $U(x|R)$}
-\begin{center}
-\tiny
-\begin{tabular}{|r|l|c|}
-\hline
-\textbf{Rank} & \textbf{$x$} & \textbf{$U(x|R)$}\\
-\hline
-1&\texttt{FR\_SE\_PU}&0.07667\\
-\hline
-2&\texttt{HLW\_Storage\_Time}&0.05264\\
-\hline
-3&\texttt{FR\_SE\_AM}&0.04148\\
-\hline
-4&\texttt{Heat\_Loss\_Factor}&0.01548\\
-\hline
-5&\texttt{LWR\_SE\_PU}&0.01343\\
-\hline
-6&\texttt{FR\_TRU\_CR}&0.008895\\
-\hline
-7&\texttt{LWR\_SE\_AM}&0.007304\\
-\hline
-8&\texttt{FR\_BUd}&0.003773\\
-\hline
-9&\texttt{LWR\_UF\_Storage\_Time}&0.003551\\
-\hline
-10&\texttt{Rock\_Specific\_Heat}&0.003085\\
-\hline
-11&\texttt{FR\_SE\_CM}&0.002522\\
-\hline
-12&\texttt{Rock\_Thermal\_Conductivity}&0.001954\\
-\hline
-13&\texttt{Ambient\_Temp}&0.001353\\
-\hline
-14&\texttt{LWR\_BUd}&0.001053\\
-\hline
-15&\texttt{LWR\_SE\_CS}&0.001033\\
-\hline
-\end{tabular}
-\end{center}
-\end{slide}
-
-
-
-% Input Parameters Ranked by $U(x|R)$
-\begin{slide}{Input Parameters Ranked by $U(x|R)$}
-\begin{center}
-\tiny
-\begin{tabular}{|r|l|c|}
-\hline
-\textbf{Rank} & \textbf{$x$} & \textbf{$U(x|R)$}\\
-\hline
-16&\texttt{LWR\_SE\_SR}&0.001024\\
-\hline
-17&\texttt{FR\_UF\_Storage\_Time}&0.0005559\\
-\hline
-18&\texttt{Drift\_Space}&0.0004421\\
-\hline
-19&\texttt{LWR\_SE\_U}&0.0002899\\
-\hline
-20&\texttt{Rock\_Density}&0.0002718\\
-\hline
-21&\texttt{FR\_SE\_CS}&0.0001331\\
-\hline
-22&\texttt{FR\_SE\_SR}&0.0001073\\
-\hline
-23&\texttt{Vent\_System\_On\_Time}&0.0001016\\
-\hline
-24&\texttt{Drift\_Diameter}&9.648E-05\\
-\hline
-25&\texttt{LWR\_SE\_NP}&9.575E-05\\
-\hline
-26&\texttt{LWR\_SE\_CM}&7.969E-05\\
-\hline
-27&\texttt{LWR\_Fuel2Mod}&7.833E-05\\
-\hline
-28&\texttt{FR\_LAN\_FF\_Cap}&6.559E-05\\
-\hline
-29&\texttt{FR\_SE\_NP}&6.212E-05\\
-\hline
-30&\texttt{FR\_SE\_U}&6.207E-05\\
-\hline
-\end{tabular}
-\end{center}
-\end{slide}
-
-
 
 
 
@@ -944,89 +677,6 @@ This metric has the following useful properties:
 \end{slide}}
 
 
-
-
-
-% FR Pu SE and HLW Storage Time
-\begin{slide}{FR Pu SE and HLW Storage Time}
-\begin{center}
-\tiny
-\begin{tabular}{|c||c|c|c||c|}
-\hline
-\multicolumn{5}{|c|}{Slice for 1 $<$ \texttt{HLW\_Storage\_Time} $<$ 6.694}\\
-\hline
-&$0.9<$\texttt{SE}$<0.99$&$0.99<$\texttt{SE}$<0.999$&$0.999<$\texttt{SE}$< 0.9999$&\\
-\hline
-$10^4 <$ \texttt{Capacity} $< 10^5$&$419$&$23$&$14$&$456$\\
-\hline
-$10^5 <$ \texttt{Capacity} $< 10^6$&$11145$&$9970$&$9553$&$30668$\\
-\hline
-$10^6 <$ \texttt{Capacity} $< 10^7$&$110$&$1556$&$2085$&$3751$\\
-\hline
-$10^7 <$ \texttt{Capacity} $< 10^8$&$0$&$0$&$0$&$0$\\
-\hline
-&$11674$&$11549$&$11652$&$34875$\\
-\hline
-\hline
-\multicolumn{5}{|c|}{Slice for 6.694 $<$ \texttt{HLW\_Storage\_Time} $<$ 44.814}\\
-\hline
-&$0.9<$\texttt{SE}$<0.99$&$0.99<$\texttt{SE}$<0.999$&$0.999<$\texttt{SE}$< 0.9999$&\\
-\hline
-$10^4 <$ \texttt{Capacity} $< 10^5$&$273$&$19$&$11$&$303$\\
-\hline
-$10^5 <$ \texttt{Capacity} $< 10^6$&$10859$&$7527$&$6373$&$24759$\\
-\hline
-$10^6 <$ \texttt{Capacity} $< 10^7$&$484$&$4157$&$5175$&$9816$\\
-\hline
-$10^7 <$ \texttt{Capacity} $< 10^8$&$0$&$2$&$24$&$26$\\
-\hline
-&$11616$&$11705$&$11583$&$34904$\\
-\hline
-\end{tabular}
-\end{center}
-\end{slide}
-
-
-
-
-% FR Pu SE and HLW Storage Time
-\begin{slide}{FR Pu SE and HLW Storage Time}
-\begin{center}
-\tiny
-\begin{tabular}{|c||c|c|c||c|}
-\hline
-\multicolumn{5}{|c|}{Slice for 1 $<$ \texttt{HLW\_Storage\_Time} $<$ 6.694}\\
-\hline
-&$0.9<$\texttt{SE}$<0.99$&$0.99<$\texttt{SE}$<0.999$&$0.999<$\texttt{SE}$< 0.9999$&\\
-\hline
-$10^4 <$ \texttt{Capacity} $< 10^5$&$47$&$1$&$2$&$50$\\
-\hline
-$10^5 <$ \texttt{Capacity} $< 10^6$&$9506$&$4114$&$3543$&$17163$\\
-\hline
-$10^6 <$ \texttt{Capacity} $< 10^7$&$2054$&$7382$&$7170$&$16606$\\
-\hline
-$10^7 <$ \texttt{Capacity} $< 10^8$&$0$&$211$&$1029$&$1240$\\
-\hline
-&$11607$&$11708$&$11744$&$35059$\\
-\hline
-\hline
-\multicolumn{5}{|c|}{Aggregation over \texttt{HLW\_Storage\_Time}}\\
-\hline
-&$0.9<$\texttt{SE}$<0.99$&$0.99<$\texttt{SE}$<0.999$&$0.999<$\texttt{SE}$< 0.9999$&\\
-\hline
-$10^4 <$ \texttt{Capacity} $< 10^5$&$739$&$43$&$27$&$809$\\
-\hline
-$10^5 <$ \texttt{Capacity} $< 10^6$&$31510$&$21611$&$19469$&$72590$\\
-\hline
-$10^6 <$ \texttt{Capacity} $< 10^7$&$2648$&$13095$&$14430$&$30173$\\
-\hline
-$10^7 <$ \texttt{Capacity} $< 10^8$&$0$&$213$&$1053$&$1266$\\
-\hline
-&$34897$&$34962$&$34979$&$104838$\\
-\hline
-\end{tabular}
-\end{center}
-\end{slide}
 
 
 
