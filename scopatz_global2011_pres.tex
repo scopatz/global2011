@@ -22,7 +22,7 @@
 \bibliography{library}{}
 
 
-entation information
+% Presentation information
 \title{Fuel Cycle Covariance of Plutonium and Americium Separations to Repository Capacity using Information Theoretic Measures}
 \subtitle{GLOBAL 2011 - December 15\superscript{th}, 2011 - Makuhari, Japan}
 \author{Anthony Scopatz\superscript{1}, Jun Li\superscript{2}, Erich Schneider\superscript{3}, Man-Sung Yim\superscript{4}}
@@ -76,7 +76,7 @@ entation information
 
 
 % Motivation
-\overlays{4}{
+\overlays{5}{
 \begin{slide}{Motivation}
 \FromSlide{1}
 \begin{itemize}
@@ -89,8 +89,8 @@ entation information
 
 \FromSlide{3}
     \item This syuite largely focused on a one-energy 
-        group reactor model (R1G) and a deep geologic
-        repository model.
+        group reactor model [1] and a deep geologic
+        repository model [2].
 
 \FromSlide{4}
     \item These essential physics models were used to extend the 
@@ -107,202 +107,6 @@ entation information
 \end{slide}}
 
 
-
-
-
-
-
-% R1G
-\begin{slide}{R1G}
-\begin{center}
-\begin{figure}
-\caption{Reactor Model [1]}
-\includegraphics[scale=0.20]{figs/reactor_model.eps}
-\end{figure}
-\end{center}
-\end{slide}
-
-
-
-% R1G Notation
-\begin{slide}{R1G Notation}
-\vspace{0.75cm}
-\begin{center}
-\begin{table}
-\caption{One-Group Reactor Symbols}
-\tiny
-\begin{tabular}{|l|c|c|}
-\hline
-\textbf{Name} & \textbf{Symbol} & \textbf{Units} \\
-\hline
-Fluence & $F = \int_0^t \phi dt^\prime = \phi \int_0^t dt^\prime = \phi \times t \cdot \frac{24 \cdot 3600 \cdot 10^3}{10^{24}}$ & [n/kb] \\
-Nuclide Subscript & $i$ (or $j$) & [1/kg\subscript{$i$}] \\
-Region Superscript & $Q$ & [unitless] \\
-Mass Weights & $m_i^Q = \frac{N_i^Q}{N_{\mbox{IHM}}} = \frac{n_i^Q A_i}{A_{\mbox{IHM}}} \cdot \frac{\rho^Q\cdot\mbox{MW}^F}{\rho^F\cdot\mbox{MW}^Q} \frac{V^Q}{V^F}$ & [kg$_i^Q$/kgIHM] \\
-Burnup & $\mbox{BU}(F) = \sum_i m_i^F \cdot \mbox{BU}_i(F)$ & [MWd/kgIHM] \\
-Prod \& Des Rates & $p_i(F), d_i(F)$ & [n/s/flux/kg$_i$]\\ 
-Transmutation Matrix & $T_{ij}(F)$ & [kg$_j$/kg$_i$] \\
-Multiplication Factor & $k(F) = \frac{P(F)}{D(F)}$ & [unitless] \\
-\hline
-\end{tabular}
-\end{table}
-\end{center}
-\end{slide}
-
-
-
-
-
-% R1G
-\overlays{2}{
-\begin{slide}{R1G}
-\FromSlide{1}
-\begin{center}
-Starting with ORIGEN generated fluence-dependent, nuclide specific data, we know:
-
-\setcounter{figure}{3}
-\begin{figure}
-\subfloat[prod \& des rates,]{\includegraphics[scale=0.21]{../one_group_method/figs/Fig02.eps}}
-\subfloat[burnups,]{\includegraphics[scale=0.21]{../one_group_method/figs/Fig03.eps}}
-\subfloat[transmutation matrices.]{\includegraphics[scale=0.21]{../one_group_method/figs/Fig01.eps}}
-\caption{Reactor Data Library (for FR \nuc{Pu}{239})}
-\end{figure}
-
-\end{center}
-
-\FromSlide{2}
-\footnotesize
-To obtain a specific reactor, the above data must be folded together.
-\end{slide}}
-
-
-
-% R1G Library Collapse
-\overlays{4}{
-\begin{slide}{R1G Library Collapse}
-\FromSlide{1}
-\begin{itemize}
-    \item Collapsing a general library down is the central calculation of 
-        the one-group reactor model.
-
-\FromSlide{2}
-    \item Using a two-region fuel pin cell model, denote the mass weight of each initial 
-        isotope $i$ in the fuel as $m^F_i$ and the in the coolant as $m^C_i$.
-
-\FromSlide{3}
-    \item Then, a mass-weighted linear combination of all of the library
-        parameters computes the full-core values.
-
-\FromSlide{4}
-    \item For example, 
-
-        \[ P(F) = P_{NL} \cdot p^F(F) = P_{NL} \sum^I_i m^F_i \cdot p_i(F) \]
-\FromSlide{1}
-\end{itemize}
-\end{slide}}
-
-
-
-
-
-% R1G
-\begin{slide}{R1G}
-\begin{center}
-\begin{figure}
-\caption{Linearly Weighted Fast Reactor Data}
-\subfloat[Burnup]{\includegraphics[scale=0.31]{../one_group_method/figs/Fig05.eps}}
-\subfloat[Multiplication Factor]{\includegraphics[scale=0.31]{../one_group_method/figs/Fig06.eps}}
-\end{figure}
-\end{center}
-\end{slide}
-
-
-
-
-% R1G 
-\overlays{3}{
-\begin{slide}{R1G}
-\FromSlide{1}
-\begin{minipage}[t]{0.49\textwidth}
-\setcounter{figure}{5}
-\begin{center}
-\begin{figure}
-\caption{Fast Reactor\\ Discharge Composition}
-\includegraphics[scale=0.3]{../one_group_method/figs/Fig07.eps}
-\end{figure}
-\end{center}
-\end{minipage}
-\begin{minipage}[t]{0.49\textwidth}
-\small
-\begin{itemize}
-    \item The transmutation matrices may be similarly weighted by initial composition.
-
-\FromSlide{2}
-    \item From the criticality calculation above we also know the discharge fluence, Fd [n/kb].
-
-\FromSlide{3}
-    \item Therefore the used fuel composition is known by taking the nuclide mass weights at 
-            Fd in Figure 6.
-
-\FromSlide{1}
-\end{itemize}
-\end{minipage}
-\end{slide}}
-
-
-
-
-% R1G Benchmark
-\begin{slide}{R1G Benchmark}
-\tiny
-\begin{table}[htbp]
-\begin{center}
-\caption{LWR Benchmark to OECD Burnup Credit [2]}
-\begin{tabular}{|l|c|c|c|c|}
-\hline
-\textbf{Nuclide} & \textbf{OECD [2] [w/o]} & \textbf{$\sigma$ of OECD [\%]} & \textbf{Results [w/o]} & \textbf{\% Difference} \\
-\hline
-\nuc{U}{234}     & 0.0178  & 9.0  & 0.0184  & +3.6  \\
-\nuc{U}{235}     & 0.8001  & 8.1  & 0.7079  & -11.5 \\
-\nuc{U}{236}     & 0.4840  & 2.6  & 0.4781  & -1.2  \\
-\nuc{U}{238}     & 93.3333 & 0.2  & 93.6109 & +0.3  \\
-\nuc{Np}{237}    & 0.0614  & 9.4  & 0.0584  & -5.0  \\
-\nuc{Pu}{238}    & 0.0226  & 13.9 & 0.0185  & -18.1 \\
-\nuc{Pu}{239}    & 0.5991  & 7.1  & 0.5104  & +14.8 \\
-\nuc{Pu}{240}    & 0.2389  & 5.3  & 0.2591  & +8.5  \\
-\nuc{Pu}{241}    & 0.1636  & 6.9  & 0.1445  & -11.7 \\
-\nuc{Pu}{242}    & 0.0602  & 8.4  & 0.0563  & -6.5  \\
-\nuc{Am}{241}    & 0.0047  & 5.3  & 0.0032  & -30.8 \\
-\nuc{Am}{243}    & 0.0148  & 10.4 & 0.0116  & -21.3 \\
-\hline
-\end{tabular}
-\end{center}
-\end{table}
-\end{slide}
-
-
-
-% R1G Benchmark Notes
-\overlays{2}{
-\begin{slide}{R1G Benchmark Notes}
-\FromSlide{1}
-\begin{itemize}
-    \item This benchmark compares an OECD study for a 40 MWd/kgIHM burn with no cooling.
-
-    \item This result shows the R1G matches the burnup credit to within two standard 
-        deviations for most actinides.
-
-\FromSlide{2}
-    \item \nuc{Am}{241} is the only nuclide showing a relatively higher departure.
-
-    \item This species is formed through \nuc{Pu}{241} decay.
-
-    \item \nuc{Am}{241} would thus match better if a constant flux or 
-        if zero reloading times were not assumed.
-
-\FromSlide{1}
-\end{itemize}
-\end{slide}}
 
 
 
@@ -1510,11 +1314,11 @@ Thus, $c_v(x|y|R)$ has the following properties:
 \tiny
 \begin{enumerate}
     \item \fullcite{Scopatz2009}
+    \item \fullcite{Li2010a}
     \item \fullcite{Takano1994}
     \item \fullcite{NEA-5990}
     \item \fullcite{Press2007c}
     \item \fullcite{ENDF}
-    \item \fullcite{Lepp2011}
     \item \fullcite{Croff2002}
 \end{enumerate}
 \end{slide}
