@@ -75,13 +75,13 @@
 
 
 
-% Motivation
+% To Date
 \overlays{5}{
-\begin{slide}{Motivation}
+\begin{slide}{To Date}
 \FromSlide{1}
 \begin{itemize}
-    \item Many fuel cycle sensitivity studies focus on linear, 
-        1D parameter sweeps from base case scenarios.
+    \item Many sensitivity studies focus on linear, 
+        1D parameter sweeps departing from base case values.
 
 \FromSlide{2}
     \item However, a set of fuel cycle component models which 
@@ -95,7 +95,7 @@
 \FromSlide{4}
     \item These essential physics models were used to extend the 
         fuel cycle sensitivity studies to simultaneously perturb 
-        many continuous variables.  
+        many continuous variables.
 
 \FromSlide{5}
     \item Such studies require a stochastic driving mechanism
@@ -110,6 +110,55 @@
 
 
 
+
+
+
+
+% Contingency Table Methodology
+\overlays{4}{
+\begin{slide}{Contingency Table Methodology}
+\FromSlide{1}
+\begin{itemize}
+    \item Previous studies explored the quantitative ranking of \emph{associations} 
+        of each input parameters to the response [3].
+
+\FromSlide{2}
+    \item This was done by performing \textbf{Contingency Table} analysis for each parameter
+        to the \underline{repository} \underline{capacity} response.  
+
+\FromSlide{3}
+    \item Denote fuel cycle responses as $R$ [MTHM/Rep.] for $x$ \& $y$ input parameters.
+
+\FromSlide{4}
+    \item \textbf{\underline{Goal:}} Determine the \textit{covariance} of
+        input pairs to the response in a manner that is independent of:
+        \begin{itemize}
+            \item the form of the response to the inputs, $R(x,y)$,
+            \item and any base-case set of initial inputs.
+        \end{itemize}
+
+\FromSlide{1}
+\end{itemize}
+\end{slide}}
+
+
+
+
+
+
+% Contingency Table Methodology
+\begin{slide}{Contingency Table Methodology}
+\begin{center}
+\begin{figure}
+\caption{Monte Carlo Methodology \& Analysis}
+\includegraphics[scale=0.25]{figs/MonteCarloMethodology.eps}
+\end{figure}
+\end{center}
+\end{slide}
+
+
+
+
 % Fuel Cycle
 \overlays{2}{
 \begin{slide}{Fuel Cycle}
@@ -118,7 +167,7 @@
     \item The essential physics models were
         used to study a Fast Reactor (FR), Light
         Water Reactor (LWR) symbiotic scenario 
-        analogous to Scheme 3a of a 2006 OECD report [3].
+        analogous to Scheme 3a of a 2006 OECD report [4].
 \end{itemize}
 
 \FromSlide{2}
@@ -151,194 +200,12 @@ parameters may be adjusted in the fuel cycle.
 \end{figure}
 \FromSlide{3}
 \small
-Sensitivity results are computed from equilibrium values derived from 
+Covariance results are computed from equilibrium values derived from 
 a full treatment of the preceding, transient cycles.
 \end{slide}}
 
 
 
-
-% Base Case Parameter Definition
-\begin{slide}{Base Case Parameter Definition}
-\tiny
-\begin{center}
-\begin{tabular}{|l||c|c|}
-\hline
-\textbf{Input Parameter $x$} & \textbf{Value} & \textbf{Units} \\
-\hline
-LWR Burnup & 50.0 & MWd/kgIHM \\
-\hline
-LWR Fuel to Moderator Ratio & 0.301 & \\
-\hline
-LWR UF Storage Time & 60 & years \\
-\hline
-SE of U from LWR UF & 0.999 & \\
-\hline
-SE of NP from LWR UF & 0.999 & \\
-\hline
-SE of PU from LWR UF & 0.999 & \\
-\hline
-SE of AM from LWR UF & 0.999 & \\
-\hline
-SE of CM from LWR UF & 0.999 & \\
-\hline
-SE of CS from LWR UF & 0.999 & \\
-\hline
-SE of SR from LWR UF & 0.999 & \\
-\hline
-FR Burnup & 140.0 & MWd/kgIHM \\
-\hline
-FR TRU Conversion Ratio & 0.50 & \\
-\hline
-Max Fraction of Lanthanide in FR Fuel & 0.0005 & Atoms/TRU Atom \\
-\hline
-FR UF Storage Time & 3 & years \\
-\hline
-Storage Before Disposal & 50 & years \\
-\hline
-\end{tabular}
-\end{center}
-\end{slide}
-
-
-
-% Base Case Parameter Definition
-\begin{slide}{Base Case Parameter Definition}
-\tiny
-\begin{center}
-\begin{tabular}{|l||c|c|}
-\hline
-\textbf{Input Parameter $x$} & \textbf{Value} & \textbf{Units} \\
-\hline
-SE of U from FR UF & 0.999 & \\
-\hline
-SE of NP from FR UF & 0.999 & \\
-\hline
-SE of PU from FR UF & 0.999 & \\
-\hline
-SE of AM from FR UF & 0.999 & \\
-\hline
-SE of CM from FR UF & 0.999 & \\
-\hline
-SE of CS from FR UF & 0.999 & \\
-\hline
-SE of SR from FR UF & 0.999 & \\
-\hline
-Density of Host Rock & 2580 & kg/m\superscript{3} \\
-\hline
-Specific Heat of Host Rock & 840 & J/kg-K \\
-\hline
-Thermal Conductivity of Host Rock & 1.626 & W/m-K \\
-\hline
-Heat Loss Factor During Ventilation  & 0.7 & \\
-\hline
-Drift diameter & 5.5 & m \\
-\hline
-Ventilation System On Time & 50 & years \\
-\hline
-Ambient Environment Temperature & 20 & C \\
-\hline
-Distance Between Drifts & 81 & m \\
-\hline
-\end{tabular}
-\end{center}
-\end{slide}
-
-
-
-
-
-
-% Fuel Cycle Benchmark
-\begin{slide}{Fuel Cycle Base Case Benchmark}
-\tiny
-\begin{center}
-\begin{tabular}{|l||c||c|c||c|c|}
-\hline
-\textbf{Scheme 3a}     & \textbf{NEA [3]} & \textbf{Model\superscript{1}} & \textbf{\% Diff} & \textbf{Model\superscript{2}} & \textbf{\% Diff} \\
-\hline
-Electricity Share: LWR & 0.632       & 0.619459             & -2.0244 & 0.634907             & +0.4579 \\
-\hline
-Electricity Share: FR  & 0.368       & 0.380541             & +3.2955 & 0.365093             & -0.7962 \\
-\hline
-FR UF: U               & 0.698       & 0.713806             & +2.2143 & 0.715224             & +2.4082 \\
-\hline
-FR UF: NP              & 0.0065      & 0.00661961           & +1.8070 & 0.00685174           & +5.1335 \\
-\hline
-FR UF: PU              & 0.266       & 0.248059             & -7.2327 & 0.248319             & -7.1204 \\
-\hline
-FR UF: AM              & 0.02        & 0.0226796            & 11.8152 & 0.0217317            & +7.9687 \\
-\hline
-FR UF: CM              & 0.0098      & 0.00883517           & -10.920 & 0.00787319           & -24.4730\\
-\hline
-HLW: U                 & 0.013324    & 0.0132681            & -0.4213 & 0.0134448            & +0.8984 \\
-\hline
-HLW: NP                & 2.26542E-05 & 2.4079E-05           & +5.9173 & 2.41083E-05          & +6.0316 \\
-\hline
-HLW: PU                & 0.000704797 & 0.000658893          & -6.9668 & 0.000632361          & -11.4548\\
-\hline
-HLW: AM                & 5.03426E-05 & 5.63068E-05          & 10.5923 & 5.12344E-05          & +1.7405 \\
-\hline
-HLW: CM                & 2.18151E-05 & 1.99031E-05          & -9.6068 & 1.67094E-05          & -30.5563\\
-\hline
-HLW: FP                & 0.985876    & 0.985973             & +0.0098 & 0.985831             & -0.0046 \\
-\hline
-\end{tabular}
-\end{center}
-
-1: Model with initial LWR \nuc{U}{235} enrichment of 4.2 w/o. 
-
-2: Model with LWR discharge burnup of 50 MWd/kg.
-\end{slide}
-
-
-
-
-
-
-
-
-
-% Contingency Table Methodology
-\overlays{4}{
-\begin{slide}{Contingency Table Methodology}
-\FromSlide{1}
-\begin{itemize}
-    \item Here, the system-wide impact of physical parameter perturbations is quantified.
-
-\FromSlide{2}
-    \item This is done by performing \textbf{Contingency Table} analysis for each parameter
-        to the \underline{repository} \underline{capacity} response.  
-
-\FromSlide{3}
-    \item Denote fuel cycle responses as $R$ [MTHM/Rep.] for $x$ \& $y$ input parameters.
-
-\FromSlide{4}
-    \item \textbf{\underline{Goal:}} Determine \textit{covariance} 
-        pairs of inputs to the response in a manner that is independent of:
-        \begin{itemize}
-            \item the form of the response to the input $R(x,y)$
-            \item and any base-case set of initial inputs.
-        \end{itemize}
-
-\FromSlide{1}
-\end{itemize}
-\end{slide}}
-
-
-
-
-
-
-% Contingency Table Methodology
-\begin{slide}{Contingency Table Methodology}
-\begin{center}
-\begin{figure}
-\caption{Monte Carlo Methodology \& Analysis}
-\includegraphics[scale=0.25]{figs/MonteCarloMethodology.eps}
-\end{figure}
-\end{center}
-\end{slide}
 
 
 
@@ -433,43 +300,12 @@ Distance Between Drifts & 56 & 106 & m & linear \\
 
 
 
-% Contingency Table Methodology
-\overlays{5}{
-\begin{slide}{Contingency Table Methodology}
-\FromSlide{1}
-\begin{itemize}
-    \item Before attempting to comprehend the subtleties of a 30+ dimensional surface,  
-        prudence demands a check to see if all 30 variables are \textit{really} needed...
-
-\FromSlide{2}
-    \begin{itemize}
-        \item (Hint: probably not!)
-    \end{itemize}
-
-\FromSlide{3}
-    \item Previous studies explored the quantitative ranking of \emph{associations} 
-        of each input parameters to the response [4].
-
-\FromSlide{4}
-    \item Here, the pairs of input parameters are ranked based on their
-    \emph{covariance} to the response.  
-
-\FromSlide{5}
-    \item These rankings are obtained by borrowing an analysis tool that is often 
-        used in Biology: \underline{Contingency Tables}.
-
-\FromSlide{1}
-\end{itemize}
-\end{slide}}
-
-
-
 % Contingency Tables
 \overlays{3}{
 \begin{slide}{Contingency Tables}
 \FromSlide{1}
 The $2\times 2$ table is most common:
-\setcounter{table}{4}
+\setcounter{table}{1}
 \begin{center}
 \begin{table}
 \caption{Hair Color to Sex Contingency Table}
@@ -600,6 +436,20 @@ $10^7 <$ \texttt{Capacity} $< 10^8$&$0$&$213$&$1053$&$1266$\\
 &$34897$&$34962$&$34979$&$104838$\\
 \hline
 \end{tabular}
+\end{center}
+\end{slide}
+
+
+
+
+
+% Parameter Pair Example
+\begin{slide}{Parameter Pair Example}
+\begin{center}
+\begin{figure}
+\caption{Total \& Top Contributors to Decay Heat [Watts/kg] of HLW for (\texttt{FR\_SE\_AM}, \texttt{FR\_SE\_PU}).}
+\includegraphics[scale=0.375]{figs/FR_SE_AM_and_FR_SE_PU_Decay_Heat.eps}
+\end{figure}
 \end{center}
 \end{slide}
 
@@ -741,20 +591,6 @@ Thus, $c_v(x|y|R)$ has the following properties:
 
 
 
-% Parameter Pair Example
-\begin{slide}{Parameter Pair Example}
-\begin{center}
-\begin{figure}
-\caption{Total \& Top Contributors to Decay Heat [Watts/kg] of HLW for (\texttt{FR\_SE\_AM}, \texttt{FR\_SE\_PU}).}
-\includegraphics[scale=0.375]{figs/FR_SE_AM_and_FR_SE_PU_Decay_Heat.eps}
-\end{figure}
-\end{center}
-\end{slide}
-
-
-
-
-
 % Conclusions
 \overlays{4}{
 \begin{slide}{Conclusions}
@@ -810,13 +646,157 @@ Thus, $c_v(x|y|R)$ has the following properties:
 \begin{enumerate}
     \item \fullcite{Scopatz2009}
     \item \fullcite{Li2010a}
-    \item \fullcite{NEA-5990}
     \item \fullcite{Scopatz2010a}
-    \item \fullcite{Takano1994}
-    \item \fullcite{Press2007c}
-    \item \fullcite{ENDF}
-    \item \fullcite{Croff2002}
+    \item \fullcite{NEA-5990}
 \end{enumerate}
 \end{slide}
+
+
+
+\begin{slide}{Extra}
+\vspace{3.5cm}
+\begin{center}
+\Large
+Extra
+\end{center}
+\end{slide}
+
+
+
+
+% Base Case Parameter Definition
+\begin{slide}{Base Case Parameter Definition}
+\tiny
+\begin{center}
+\begin{tabular}{|l||c|c|}
+\hline
+\textbf{Input Parameter $x$} & \textbf{Value} & \textbf{Units} \\
+\hline
+LWR Burnup & 50.0 & MWd/kgIHM \\
+\hline
+LWR Fuel to Moderator Ratio & 0.301 & \\
+\hline
+LWR UF Storage Time & 60 & years \\
+\hline
+SE of U from LWR UF & 0.999 & \\
+\hline
+SE of NP from LWR UF & 0.999 & \\
+\hline
+SE of PU from LWR UF & 0.999 & \\
+\hline
+SE of AM from LWR UF & 0.999 & \\
+\hline
+SE of CM from LWR UF & 0.999 & \\
+\hline
+SE of CS from LWR UF & 0.999 & \\
+\hline
+SE of SR from LWR UF & 0.999 & \\
+\hline
+FR Burnup & 140.0 & MWd/kgIHM \\
+\hline
+FR TRU Conversion Ratio & 0.50 & \\
+\hline
+Max Fraction of Lanthanide in FR Fuel & 0.0005 & Atoms/TRU Atom \\
+\hline
+FR UF Storage Time & 3 & years \\
+\hline
+Storage Before Disposal & 50 & years \\
+\hline
+\end{tabular}
+\end{center}
+\end{slide}
+
+
+
+% Base Case Parameter Definition
+\begin{slide}{Base Case Parameter Definition}
+\tiny
+\begin{center}
+\begin{tabular}{|l||c|c|}
+\hline
+\textbf{Input Parameter $x$} & \textbf{Value} & \textbf{Units} \\
+\hline
+SE of U from FR UF & 0.999 & \\
+\hline
+SE of NP from FR UF & 0.999 & \\
+\hline
+SE of PU from FR UF & 0.999 & \\
+\hline
+SE of AM from FR UF & 0.999 & \\
+\hline
+SE of CM from FR UF & 0.999 & \\
+\hline
+SE of CS from FR UF & 0.999 & \\
+\hline
+SE of SR from FR UF & 0.999 & \\
+\hline
+Density of Host Rock & 2580 & kg/m\superscript{3} \\
+\hline
+Specific Heat of Host Rock & 840 & J/kg-K \\
+\hline
+Thermal Conductivity of Host Rock & 1.626 & W/m-K \\
+\hline
+Heat Loss Factor During Ventilation  & 0.7 & \\
+\hline
+Drift diameter & 5.5 & m \\
+\hline
+Ventilation System On Time & 50 & years \\
+\hline
+Ambient Environment Temperature & 20 & C \\
+\hline
+Distance Between Drifts & 81 & m \\
+\hline
+\end{tabular}
+\end{center}
+\end{slide}
+
+
+
+
+
+
+% Fuel Cycle Benchmark
+\begin{slide}{Fuel Cycle Base Case Benchmark}
+\tiny
+\begin{center}
+\begin{tabular}{|l||c||c|c||c|c|}
+\hline
+\textbf{Scheme 3a}     & \textbf{NEA [3]} & \textbf{Model\superscript{1}} & \textbf{\% Diff} & \textbf{Model\superscript{2}} & \textbf{\% Diff} \\
+\hline
+Electricity Share: LWR & 0.632       & 0.619459             & -2.0244 & 0.634907             & +0.4579 \\
+\hline
+Electricity Share: FR  & 0.368       & 0.380541             & +3.2955 & 0.365093             & -0.7962 \\
+\hline
+FR UF: U               & 0.698       & 0.713806             & +2.2143 & 0.715224             & +2.4082 \\
+\hline
+FR UF: NP              & 0.0065      & 0.00661961           & +1.8070 & 0.00685174           & +5.1335 \\
+\hline
+FR UF: PU              & 0.266       & 0.248059             & -7.2327 & 0.248319             & -7.1204 \\
+\hline
+FR UF: AM              & 0.02        & 0.0226796            & 11.8152 & 0.0217317            & +7.9687 \\
+\hline
+FR UF: CM              & 0.0098      & 0.00883517           & -10.920 & 0.00787319           & -24.4730\\
+\hline
+HLW: U                 & 0.013324    & 0.0132681            & -0.4213 & 0.0134448            & +0.8984 \\
+\hline
+HLW: NP                & 2.26542E-05 & 2.4079E-05           & +5.9173 & 2.41083E-05          & +6.0316 \\
+\hline
+HLW: PU                & 0.000704797 & 0.000658893          & -6.9668 & 0.000632361          & -11.4548\\
+\hline
+HLW: AM                & 5.03426E-05 & 5.63068E-05          & 10.5923 & 5.12344E-05          & +1.7405 \\
+\hline
+HLW: CM                & 2.18151E-05 & 1.99031E-05          & -9.6068 & 1.67094E-05          & -30.5563\\
+\hline
+HLW: FP                & 0.985876    & 0.985973             & +0.0098 & 0.985831             & -0.0046 \\
+\hline
+\end{tabular}
+\end{center}
+
+1: Model with initial LWR \nuc{U}{235} enrichment of 4.2 w/o. 
+
+2: Model with LWR discharge burnup of 50 MWd/kg.
+\end{slide}
+
+
 
 \end{document}
